@@ -25,6 +25,8 @@ composer require borisanthony/pretty-unit
 
 ## Usage
 
+**See `/tests/Unit/PrettyUnitTest.php` for a few examples of usage.**
+
 To keep commands shorter, we skip Measurement Unit's "type" groupings.
 
 To avoid method name collisions, we drop-capped the initial of our method names 
@@ -52,7 +54,6 @@ $HTML = PrettyUnit::meterPerSecond(13.2)->toKilometerPerHour()->Html();
 ```
 
 *This way you get most of MU's power coupled with the formatter.*
-
 
 ---
 
