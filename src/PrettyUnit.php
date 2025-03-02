@@ -61,7 +61,7 @@ use PrinsFrank\MeasurementUnit\Weight\Pound;
 
 class PrettyUnit
 {
-  private Length|Speed|Temperature|Time|Torque|Volume|Weight $measurementUnit;
+  private Length|Speed|Temperature|Time|Torque|Volume|Weight|PrettyUnit $measurementUnit;
 
   public function Html(string $sprintf_Template = '<span class="value">%1$.1f</span> <span class="symbol">%2$s</span>'): string
   {
@@ -75,6 +75,22 @@ class PrettyUnit
     $value = $this->measurementUnit->value;
     $symbol = $this->measurementUnit->getSymbol();
     return vsprintf($sprintf_Template, [$value, $symbol]);
+  }
+
+  // ===========================================================================
+  // GETTERS
+  
+  public function getObject(): MeasurementUnit
+  {
+    return $this->measurementUnit;
+  }
+  public function getValue(): float
+  {
+    return $this->measurementUnit->value;
+  }
+  public function getSymbol(): string
+  {
+    return $this->measurementUnit->getSymbol();
   }
 
 
@@ -310,7 +326,7 @@ class PrettyUnit
    * @param array $arguments The arguments passed to the method.
    * @return mixed The result of the method call. If the result is an instance of MeasurementUnit, the current instance is returned.
    */
-  public function __call($name, $arguments)
+  public function __call(string $name, array $arguments)
   {
     $result = call_user_func_array([$this->measurementUnit, $name], $arguments);
     if ($result instanceof MeasurementUnit) {
