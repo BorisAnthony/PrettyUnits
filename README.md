@@ -3,7 +3,7 @@
 <!-- ![GitHub](https://img.shields.io/github/license/borisanthony/pretty-unit)
 ![PHP Version Support](https://img.shields.io/packagist/php-v/borisanthony/pretty-unit) -->
 
-## A wrapper for formatting [Measurement Unit](https://github.com/PrinsFrank/measurement-unit/)
+### A wrapper class for accessing [Prinsfrank/measurement-unit](https://github.com/PrinsFrank/measurement-unit/) and formatting its output.
 
 Pretty Unit combines most of Measurement Unit's power in a simple API and adds a `sprintf` formatter, for when you need to format measurements values and their symbols.
 
