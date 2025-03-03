@@ -1,6 +1,6 @@
 {
-  "name": "borisanthony/pretty-units",
-  "description": "Wrapper class for Prinsfrank/measurement-units providing some utility & formatting methods",
+  "name": "borisanthony/pretty-unit",
+  "description": "Wrapper class for Prinsfrank/measurement-unit providing some utility & formatting methods",
   "version": "0.1.0",
   "type": "library",
   "license": "MIT",
